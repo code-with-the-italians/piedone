@@ -14,16 +14,19 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "dev.sebastiano.bundel"
+        applicationId = "it.codewiththeitalians.piedone"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
-        namespace = "dev.sebastiano.bundel"
-        testNamespace = "dev.sebastiano.bundel.test"
+        namespace = "it.codewiththeitalians.piedone"
+        testNamespace = "it.codewiththeitalians.piedone.test"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     testOptions {
@@ -91,6 +94,10 @@ detekt {
 }
 
 dependencies {
+    implementation(libs.androidx.lifecycle.lifecycleRuntimeKtx)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui.graphics)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
     coreLibraryDesugaring(libs.com.android.tools.desugar)
 
     implementation(libs.bundles.compose)
@@ -117,6 +124,7 @@ dependencies {
     androidTestImplementation(libs.androidx.tracing)
 
     androidTestUtil(libs.bundles.androidxTestUtils)
+    debugImplementation(libs.androidx.compose.ui.uiTooling)
 }
 
 configurations.all {

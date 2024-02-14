@@ -50,6 +50,7 @@ room = "2.5.2"
 splashscreen = "1.0.1"
 timber = "5.0.1"
 uiAutomator = "2.2.0"
+composeBom = "2023.08.00"
 
 [libraries]
 androidx-activity-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
@@ -112,6 +113,8 @@ jakes-timber-timber = { module = "com.jakewharton.timber:timber", version.ref = 
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
 kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 
 [bundles]
 accompanist = [
