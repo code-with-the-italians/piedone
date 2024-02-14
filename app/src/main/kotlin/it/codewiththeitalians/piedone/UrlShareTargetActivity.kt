@@ -43,7 +43,7 @@ class UrlShareTargetActivity : ComponentActivity() {
         }
 
         if (url.matches(IVAN_THE_REGEX)) {
-            val newUrl = "https://12ft.io/${url}"
+            val newUrl = "https://12ft.io/$url"
             Timber.i("Starting new URL intent: $newUrl")
             val newIntent = Intent(Intent.ACTION_VIEW, Uri.parse(newUrl))
             startActivity(newIntent)
