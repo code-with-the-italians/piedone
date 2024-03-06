@@ -15,7 +15,7 @@ android {
 
     defaultConfig {
         applicationId = "it.codewiththeitalians.piedone"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -73,7 +73,6 @@ android {
 
 licensee {
     allow("Apache-2.0")
-    allowUrl("https://developer.android.com/studio/terms.html")
 }
 
 kotlin {
@@ -94,6 +93,7 @@ detekt {
 dependencies {
     implementation(libs.androidx.lifecycle.lifecycleRuntimeKtx)
     implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.exifInterface)
     coreLibraryDesugaring(libs.com.android.tools.desugar)
 
     implementation(libs.bundles.compose)

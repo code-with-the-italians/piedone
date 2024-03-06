@@ -1,3 +1,4 @@
 <resources>
     <string name="title_activity_url_share_target">&gt; Share things here &lt;</string>
+    <string name="title_activity_picker">Piccy Blinders</string>
 </resources>

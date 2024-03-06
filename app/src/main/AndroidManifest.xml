@@ -10,19 +10,29 @@
         android:name=".PiedoneApp"
         android:label="Piedone"
         android:supportsRtl="true">
+        <activity
+            android:name=".PickerActivity"
+            android:theme="@style/Theme.Piedone"
+            android:exported="true"
+            android:label="@string/title_activity_picker">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UrlShareTargetActivity"
             android:theme="@style/Theme.Piedone"
             android:exported="true"
             android:label="@string/title_activity_url_share_target">
-
             <intent-filter android:label="DINGUS">
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,7 +41,6 @@
                 <category android:name="android.intent.category.MAIN" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
