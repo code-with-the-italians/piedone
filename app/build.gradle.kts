@@ -73,8 +73,6 @@ android {
 
 licensee {
     allow("Apache-2.0")
-    allow("BSD-3-Clause")
-    allow("MIT")
     allowUrl("https://developer.android.com/studio/terms.html")
 }
 
@@ -95,9 +93,7 @@ detekt {
 
 dependencies {
     implementation(libs.androidx.lifecycle.lifecycleRuntimeKtx)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui.graphics)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
     coreLibraryDesugaring(libs.com.android.tools.desugar)
 
     implementation(libs.bundles.compose)
@@ -107,23 +103,8 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
     implementation(libs.jakes.timber.timber)
 
-    debugImplementation(libs.androidx.compose.ui.uiTest.manifest)
-
     implementation(libs.kotlinx.serialization)
 
-    testImplementation(kotlin("reflect"))
-    testImplementation(libs.assertk)
-    testImplementation(libs.junit)
-    testImplementation(libs.kotlinx.coroutines.test)
-
-    androidTestImplementation(libs.google.accompanistTestHarness)
-    androidTestImplementation(libs.androidx.compose.ui.uiTest.junit4)
-    androidTestImplementation(libs.androidx.test.uiAutomator)
-    androidTestImplementation(libs.androidx.test.espresso.device)
-    androidTestImplementation(libs.androidx.test.runner)
-    androidTestImplementation(libs.androidx.tracing)
-
-    androidTestUtil(libs.bundles.androidxTestUtils)
     debugImplementation(libs.androidx.compose.ui.uiTooling)
 }
 
