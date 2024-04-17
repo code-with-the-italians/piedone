@@ -10,6 +10,7 @@
         android:name=".PiedoneApp"
         android:label="Piedone"
         android:supportsRtl="true">
+
         <activity
             android:name=".PickerActivity"
             android:theme="@style/Theme.Piedone"
@@ -17,10 +18,15 @@
             android:label="@string/title_activity_picker">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter android:label="The Nug">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
         </activity>
+
         <activity
             android:name=".UrlShareTargetActivity"
             android:theme="@style/Theme.Piedone"
